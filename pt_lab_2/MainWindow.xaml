@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pt_lab_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Column="0" Grid.Row="0" ItemsSource="{Binding Orders}" SelectionChanged="DataGrid_SelectionChanged"/>
+        <local:OrderView Grid.Column="1" DataContext="{Binding}"/>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            
+        </Grid>
     </Grid>
 </Window>

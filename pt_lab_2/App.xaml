@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:pt_lab_2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <local:DateValueConverter x:Key="DateValueConverter"/>
     </Application.Resources>
 </Application>

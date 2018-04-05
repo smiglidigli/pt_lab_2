@@ -34,8 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,6 +63,124 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Alphabetical_list_of_product.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category_Sales_for_1997.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Current_Product_List.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDemographic.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_and_Suppliers_by_City.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustOrderHist_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustOrdersDetail_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustOrdersOrders_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DateValueConverter.cs" />
+    <Compile Include="Employee.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Sales_by_Country_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwndModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_Qry.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderView.xaml.cs">
+      <DependentUpon>OrderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Detail.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Details_Extended.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Subtotal.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products_Above_Average_Price.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products_by_Category.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Sales_for_1997.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesByCategory_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_by_Category.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_by_Year_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Totals_by_Amount.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shipper.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Summary_of_Sales_by_Quarter.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Summary_of_Sales_by_Year.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ten_Most_Expensive_Products_Result.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Territory.cs">
+      <DependentUpon>NorthwndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,8 +193,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OrderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NorthwndModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwndModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwndModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwndModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +226,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="NorthwndModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NorthwndModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NorthwndModel.edmx.diagram">
+      <DependentUpon>NorthwndModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +241,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NorthwndModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthwndModel.edmx</DependentUpon>
+      <LastGenOutput>NorthwndModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NorthwndModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthwndModel.edmx</DependentUpon>
+      <LastGenOutput>NorthwndModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

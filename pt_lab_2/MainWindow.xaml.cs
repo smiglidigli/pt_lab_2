@@ -20,9 +20,20 @@ namespace pt_lab_2
     /// </summary>
     public partial class MainWindow : Window
     {
+        public NorthwndViewModel Northwnd { get; private set; }
         public MainWindow()
         {
             InitializeComponent();
+            Northwnd = new NorthwndViewModel();
+            DataContext = Northwnd;
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems?.Count > 0)
+            {
+                Northwnd.SelectedOrder = e.AddedItems[0] as Order;
+            }
         }
     }
 }
