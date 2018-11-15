@@ -15,7 +15,58 @@
             <RowDefinition Height="85*"/>
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Column="0" Grid.Row="0" ItemsSource="{Binding Orders}" SelectionChanged="DataGrid_SelectionChanged"/>
+        
+        <!--<DataGrid Grid.Column="0" Grid.Row="0" ItemsSource="{Binding Orders}" SelectionChanged="DataGrid_SelectionChanged"/>-->
+
+        <DataGrid Grid.Row="0" ItemsSource="{Binding Orders}"
+                  CanUserResizeColumns="True"
+                  AutoGenerateColumns="False"
+                  HeadersVisibility="Column"
+                  SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="OrderID"
+                                        Width="70"
+                                        CanUserSort="True"
+                                        SortMemberPath="OrderID">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding OrderID}" Margin="2.0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="CustomerID"
+                                        Width="70"
+                                        CanUserSort="True"
+                                        SortMemberPath="CustomerID">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding CustomerID}" Margin="2.0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="CustomerId"
+                                        Width="70"
+                                        CanUserSort="True"
+                                        SortMemberPath="CustomerId">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding EmployeeID}" Margin="2.0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="OrderDate"
+                                        Width="70"
+                                        CanUserSort="True"
+                                        SortMemberPath="OrderDate">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding OrderDate, Converter={StaticResource DateValueConverter}}" Margin="2.0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
         <local:OrderView Grid.Column="1" DataContext="{Binding}"/>
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
             

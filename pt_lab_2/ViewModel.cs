@@ -57,7 +57,6 @@ namespace pt_lab_2
             }
         }
 
-        private ObservableCollection<Customer> _customers;
         public ObservableCollection<Customer> Customers
         {
             get
@@ -65,9 +64,11 @@ namespace pt_lab_2
                 if (!isCustomersLoaded)
                 {
                     Entities.Customers.Load();
+                    //Console.WriteLine(Entities.Customers.Count());
+                    foreach (var item in Entities.Customers.Local) Console.WriteLine(item);
                     isCustomersLoaded = true;
                 }
-                return _customers;
+                return Entities.Customers.Local;
             }
 
         }
