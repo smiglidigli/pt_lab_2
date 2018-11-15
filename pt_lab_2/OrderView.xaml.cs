@@ -22,7 +22,7 @@ namespace pt_lab_2
     {
         public OrderView()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }
